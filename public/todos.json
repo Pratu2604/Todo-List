@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "item": "Learn React",
+    "date": "2024-08-01",
+    "description": "Understand the basics of React",
+    "done": false
+  },
+  {
+    "id": 2,
+    "item": "Practice Material-UI",
+    "date": "2024-08-02",
+    "description": "Get familiar with Material-UI components",
+    "done": true
+  },
+  {
+    "id": 3,
+    "item": "Build a Todo App",
+    "date": "2024-08-03",
+    "description": "Develop a Todo App using React and Material-UI",
+    "done": false
+  }
+]
