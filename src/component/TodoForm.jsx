@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { TextField, Button, Paper, Grid, Typography } from '@mui/material';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { TextField, Button, Paper, Grid, Typography } from "@mui/material";
+import { useParams, useNavigate } from "react-router-dom";
 
 export default function TodoForm({ todos, onSubmit }) {
   const { id } = useParams();
@@ -8,9 +8,9 @@ export default function TodoForm({ todos, onSubmit }) {
   const isEditMode = Boolean(id);
 
   const [task, setTask] = useState({
-    name: '',
-    description: '',
-    date: '',
+    name: "",
+    description: "",
+    date: "",
   });
 
   useEffect(() => {
@@ -44,13 +44,13 @@ export default function TodoForm({ todos, onSubmit }) {
       done: false,
     };
     onSubmit(updatedTask, isEditMode);
-    navigate('/');
+    navigate("/");
   };
 
   return (
-    <Paper style={{ padding: '16px', maxWidth: '500px', margin: '0 auto' }}>
+    <Paper style={{ padding: "16px", maxWidth: "500px", margin: "0 auto" , marginTop:35}}>
       <Typography variant="h6" gutterBottom>
-        {isEditMode ? 'Edit Task' : 'Add New Task'}
+        {isEditMode ? "Edit Task" : "Add New Task"}
       </Typography>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
@@ -88,7 +88,7 @@ export default function TodoForm({ todos, onSubmit }) {
           </Grid>
           <Grid item xs={12}>
             <Button variant="contained" color="primary" type="submit" fullWidth>
-              {isEditMode ? 'Update Task' : 'Add Task'}
+              {isEditMode ? "Update Task" : "Add Task"}
             </Button>
           </Grid>
         </Grid>
